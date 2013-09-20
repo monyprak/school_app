@@ -1,0 +1,25 @@
+// Place all the styles related to the categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul#main-nav{
+	list-style:none;
+	li{
+		display: inline;
+	}
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.center{
+	margin:0 auto;
+}
+article.content-wrap{
+	width:70%;
+}
+/*aside{
+	width:50%;
+}*/

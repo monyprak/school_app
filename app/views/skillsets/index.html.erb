@@ -1,0 +1,18 @@
+<article class="content-wrap center">
+	<section class="left">
+		<aside class="left">Skillsets name</aside>
+		&nbsp;
+		<aside class="right"><%= link_to "new skillset", new_skillset_path  %></aside>
+	</section>
+	<br>
+	<section class="left">
+		<% @skillsets.each do |s| %>
+			<aside class="right">
+				<%= s.name %>
+			
+				<%= link_to "Edit", edit_skillset_path(s)  %> | 
+				<%= link_to "Delete", skillset_path(s), method: :delete, data:{confirm: "Delete now?"} %>
+			</aside><br>
+		<% end %>
+	</section>
+</article>

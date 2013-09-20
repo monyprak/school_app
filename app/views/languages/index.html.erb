@@ -1,0 +1,18 @@
+<article class="content-wrap center">
+	<section class="left">
+		<aside class="left">Languages name</aside>
+		&nbsp;
+		<aside class="right"><%= link_to "new language", new_language_path  %></aside>
+	</section>
+	<br>
+	<section class="left">
+		<% @languages.each do |l| %>
+			<aside class="right">
+				<%= l.name %>
+			
+				<%= link_to "Edit", edit_language_path(l)  %> | 
+				<%= link_to "Delete", language_path(l), method: :delete, data:{confirm: "Delete now?"} %>
+			</aside><br>
+		<% end %>
+	</section>
+</article>

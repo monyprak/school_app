@@ -1,0 +1,18 @@
+<article class="content-wrap center">
+	<section class="left">
+		<aside class="left">Categories name</aside>
+		&nbsp;
+		<aside class="right"><%= link_to "new category", new_category_path  %></aside>
+	</section>
+	<br>
+	<section class="left">
+		<% @categories.each do |c| %>
+			<aside class="right">
+				<%= c.name %>
+			
+				<%= link_to "Edit", edit_category_path(c)  %> | 
+				<%= link_to "Delete", category_path(c), method: :delete, data:{confirm: "Delete now?"} %>
+			</aside><br>
+		<% end %>
+	</section>
+</article>

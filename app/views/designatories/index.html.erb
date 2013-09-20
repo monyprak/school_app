@@ -1,0 +1,18 @@
+<article class="content-wrap center">
+	<section class="left">
+		<aside class="left">Designatories name</aside>
+		&nbsp;
+		<aside class="right"><%= link_to "new designatory", new_designatory_path  %></aside>
+	</section>
+	<br>
+	<section class="left">
+		<% @designatories.each do |d| %>
+			<aside class="right">
+				<%= d.name %>
+			
+				<%= link_to "Edit", edit_designatory_path(d)  %> | 
+				<%= link_to "Delete", designatory_path(d), method: :delete, data:{confirm: "Delete now?"} %>
+			</aside><br>
+		<% end %>
+	</section>
+</article>

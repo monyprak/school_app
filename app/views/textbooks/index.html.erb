@@ -1,0 +1,18 @@
+<article class="content-wrap center">
+	<section class="left">
+		<aside class="left">Textbooks name</aside>
+		&nbsp;
+		<aside class="right"><%= link_to "new textbook", new_textbook_path  %></aside>
+	</section>
+	<br>
+	<section class="left">
+		<% @textbooks.each do |t| %>
+			<aside class="right">
+				<%= t.name %>
+			
+				<%= link_to "Edit", edit_textbook_path(t)  %> | 
+				<%= link_to "Delete", textbook_path(t), method: :delete, data:{confirm: "Delete now?"} %>
+			</aside><br>
+		<% end %>
+	</section>
+</article>
